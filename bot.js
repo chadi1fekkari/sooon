@@ -12,11 +12,11 @@ client.on('ready', () => {
 
  
 
-var PrEfix = "-";
+var prefix = "-";
 
 client.on('message', message => {
 
-  if (!message.content.startsWith(PrEfix)) return;
+  if (!message.content.startsWith(prefix)) return;
 
   var args = message.content.split(' ').slice(1);
 
@@ -24,7 +24,7 @@ client.on('message', message => {
 
   if (message.author.id !== '501428682783457280') return;
 
-if (message.content.startsWith(PrEfix + 'wt')) {
+if (message.content.startsWith(prefix + 'wt')) {
 
 client.user.setActivity(argresult, {type:'WATCHING'});
 
@@ -32,7 +32,7 @@ client.user.setActivity(argresult, {type:'WATCHING'});
 
 } else 
 
-if (message.content.startsWith(PrEfix + 'ls')) {
+if (message.content.startsWith(prefix + 'ls')) {
 
 client.user.setActivity(argresult, {type:'LISTENING'});
 
@@ -40,7 +40,7 @@ client.user.setActivity(argresult, {type:'LISTENING'});
 
 } else 
 
-if (message.content.startsWith(PrEfix + 'st')) {
+if (message.content.startsWith(prefix + 'st')) {
 
   client.user.setGame(argresult, "https://www.twitch.tv/amira");
 
